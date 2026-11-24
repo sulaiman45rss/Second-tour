@@ -1,3 +1,5 @@
+const LIEN_PAIEMENT = "https://buy.stripe.com/test_cNibJ3bnt9bR8izbPz1gs00";
+
 export default function Accueil() {
   return (
     <main className="mx-auto max-w-xl px-5 pb-16 pt-10">
@@ -16,13 +18,13 @@ export default function Accueil() {
       </p>
 
       <a
-        href="#prix"
+        href={LIEN_PAIEMENT}
         className="mt-8 flex min-h-14 w-full items-center justify-center rounded-xl bg-orange px-6 text-lg font-bold text-white"
       >
         Commencer
       </a>
       <p className="mt-3 text-center text-sm">
-        C’est gratuit, sans carte bancaire.
+        29&nbsp;€ par mois, sans engagement.
       </p>
 
       <section className="mt-12 rounded-2xl border-2 border-graphite bg-white p-5">
@@ -64,9 +66,12 @@ export default function Accueil() {
           29&nbsp;€<span className="text-xl font-bold"> / mois</span>
         </p>
         <p className="mt-2">Sans engagement, résiliable à tout moment.</p>
-        <p className="mt-4 text-sm">
-          Les inscriptions ouvrent très bientôt.
-        </p>
+        <a
+          href={LIEN_PAIEMENT}
+          className="mt-5 flex min-h-14 w-full items-center justify-center rounded-xl bg-orange px-6 text-lg font-bold text-white"
+        >
+          Commencer
+        </a>
       </section>
     </main>
   );
